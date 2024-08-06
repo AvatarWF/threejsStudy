@@ -11,7 +11,7 @@ scene.add(ball);
 
 const floor = new THREE.Mesh(
   new THREE.PlaneBufferGeometry(10, 10),
-  new THREE.MeshPhongMaterial({ color: 0xFFFFFF, side: THREE.DoubleSide })
+  new THREE.MeshStandardMaterial({ color: 0xFFFFFF, side: THREE.DoubleSide })
 )
 
 floor.rotation.x = THREE.MathUtils.degToRad(-90);
@@ -25,7 +25,7 @@ shadowLight.target = ball;
 scene.add(shadowLight);
 
 x3.add(ball, { label: 'Ball' });
-x3.add(floor, { Label: 'Floor' });
+x3.add(floor, { label: 'Floor' });
 x3.add(shadowLight);
 
 renderer.setAnimationLoop(() => {
