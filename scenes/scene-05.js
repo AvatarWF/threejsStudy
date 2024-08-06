@@ -18,7 +18,7 @@ floor.rotation.x = THREE.MathUtils.degToRad(-90);
 floor.receiveShadow = true;
 scene.add(floor);
 
-const shadowLight = new THREE.PointLight(0xFFFFFF, 0.75);
+const shadowLight = new THREE.PointLight(0xFFFFFF, 10);
 shadowLight.position.y = 4;
 shadowLight.castShadow = true;
 shadowLight.target = ball;
