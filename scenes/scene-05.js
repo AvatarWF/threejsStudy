@@ -1,7 +1,7 @@
 
 const ball = new THREE.Mesh(
   new THREE.SphereBufferGeometry(0.5, 60, 60),
-  new THREE.MeshPhongMaterial({ color: 0x36acac })
+  new THREE.MeshStandardMaterial({ color: 0x36acac })
 );
 
 ball.position.x = 1;
