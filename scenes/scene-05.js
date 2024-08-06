@@ -1,7 +1,7 @@
 
 const ball = new THREE.Mesh(
   new THREE.SphereBufferGeometry(0.5, 60, 60),
-  new THREE.MeshStandardMaterial({ color: 0x36acac })
+  new THREE.MeshPhysicalMaterial({ color: 0x36acac })
 );
 
 ball.position.x = 1;
@@ -11,7 +11,7 @@ scene.add(ball);
 
 const floor = new THREE.Mesh(
   new THREE.PlaneBufferGeometry(10, 10),
-  new THREE.MeshStandardMaterial({ color: 0xFFFFFF, side: THREE.DoubleSide })
+  new THREE.MeshPhysicalMaterial({ color: 0xff0909, side: THREE.DoubleSide, metalness: 0.48, roughness: 0.57 })
 )
 
 floor.rotation.x = THREE.MathUtils.degToRad(-90);
