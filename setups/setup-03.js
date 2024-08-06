@@ -30,24 +30,24 @@ camera.position.y = 3.5;
 camera.position.z = 8.5;
 
 const light = new THREE.HemisphereLight(
-  0xFFFFFF, 0x080820, 0.9
+  0xFFFFFF, 0xFFFFFF, 0.2
 );
 
 scene.add(light);
 
-const x3 = new THREEx3(
-  {
-    THREE,
-    OrbitControls: THREE.OrbitControls,
-    camera,
-    renderer,
-    scene
-  },
-  {
-    grid: { visible: false },
-    axes: { visible: false }
-  },
+const x3 = new THREEx3({
+  THREE,
+  OrbitControls: THREE.OrbitControls,
+  camera,
+  renderer,
+  scene
+}, {
+  grid: { visible: false },
+  axes: { visible: false }
+},
 );
 
 x3.add(camera, { open: false });
 x3.add(light, { helper: { visible: false } });
+
+renderer.shadowMap.enabled = true;
