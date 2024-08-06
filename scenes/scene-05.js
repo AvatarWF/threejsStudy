@@ -1,7 +1,7 @@
 
 const ball = new THREE.Mesh(
   new THREE.SphereBufferGeometry(0.5, 60, 60),
-  new THREE.MeshLambertMaterial({ color: 0x36acac })
+  new THREE.MeshPhongMaterial({ color: 0x36acac })
 );
 
 ball.position.x = 1;
@@ -24,9 +24,9 @@ shadowLight.castShadow = true;
 shadowLight.target = ball;
 scene.add(shadowLight);
 
+x3.add(ball, { label: 'Ball' });
+x3.add(floor, { Label: 'Floor' });
 x3.add(shadowLight);
-x3.add(floor);
-x3.add(ball);
 
 renderer.setAnimationLoop(() => {
   x3.tick();
