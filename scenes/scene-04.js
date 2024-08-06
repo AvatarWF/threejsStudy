@@ -18,12 +18,13 @@ floor.rotation.x = THREE.MathUtils.degToRad(-90);
 floor.receiveShadow = true;
 scene.add(floor);
 
-const shadowLight = new THREE.PointLight(0xFFFFFF, 2, 60);
-shadowLight.position.y = 4;
-shadowLight.castShadow = true;
-scene.add(shadowLight);
+const sun = new THREE.DirectionalLight(0xFFFFFF, 1);
+sun.position.y = 4;
+sun.castShadow = true;
+sun.target = cube;
+scene.add(sun);
 
-x3.add(shadowLight, { helper: {visible: false }});
+x3.add(sun);
 x3.add(cube);
 
 renderer.setAnimationLoop(() => {
