@@ -53,3 +53,4 @@ x3.add(light, { helper: { visible: false } });
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.physicallyCorrectLights = true;
+renderer.toneMapping = THREE.CineonToneMapping;
